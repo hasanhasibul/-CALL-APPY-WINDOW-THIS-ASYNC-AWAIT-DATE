@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+    <ul id="LastPerson">
+        <li>My List</li>
+        <li>Lorem, ipsum.</li>
+        <li>Sunt, laboriosam.</li>
+        <li>Expedita, animi?</li>
+        <li>Rem, recusandae.</li>
+        <li id="last">Fuga, vel.</li>
+    </ul>
+    <script>
+        function itemClickHandler(event){
+            // event.target.innerText = "some one clicked";
+            // event.target.parentNode.removeChild(event)
+           const li= document.getElementById("last");
+           event.target.parentNode.removeChild(event.target);
+
+       }
+       document.getElementById("LastPerson").addEventListener("click",itemClickHandler)
+    </script>
+</body>
+</html>
